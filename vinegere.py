@@ -18,12 +18,12 @@ def encrypte(msg, key):
             key_shift = ord(key[posi % len(key)].lower()) - ord('a')
             # Calculer la position du caractère à déchiffrer
             pos = ord(char.lower()) - ord('a')
-            # Déchiffrer le caractère en appliquant le décalage
+            # chiffrer le caractère en appliquant le décalage
             decrypted_char = chr(((pos + key_shift) % 26) + ord('a'))
             crypt += decrypted_char
             posi += 1
         else:
-            # Conserver les caractères non alphabétiques tels quels dans le message déchiffré
+            # Conserver les caractères non alphabétiques tels quels dans le message chiffré
             crypt += char
 
     return crypt
